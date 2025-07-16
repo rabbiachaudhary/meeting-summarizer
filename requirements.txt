@@ -1,0 +1,5 @@
+Flask
+whisper
+groq
+gtts
+torch
