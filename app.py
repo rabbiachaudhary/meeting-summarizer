@@ -15,8 +15,9 @@ os.makedirs(STATIC_FOLDER, exist_ok=True)
 # Load Whisper model once
 model = whisper.load_model("base")
 
-# Groq Client
-client = Groq(api_key="your-groq-api-key")  # Replace with your actual API key
+# Groq Clientimport os
+groq_api_key = os.environ.get("GROQ_API_KEY")
+client = Groq(api_key=groq_api_key)
 
 @app.route("/", methods=["GET", "POST"])
 def index():
